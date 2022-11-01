@@ -1,0 +1,30 @@
+ 
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+.slide {
+    font-size:5vw;
+     
+    top:40%;
+    font-size:5vw;
+    left: 15%; 
+    top:40%;
+    position: absolute;
+    color: aliceblue;
+ 
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
