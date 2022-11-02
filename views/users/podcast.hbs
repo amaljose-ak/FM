@@ -1,55 +1,60 @@
-<h1 class="ml12">use your headphone and sounds up</h1>
-<button type="button" class="btn">Listen Here</button>
-<img src="https://images.unsplash.com/photo-1626126525134-fbbc07afb32c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" style="width:100%;height:auto;">
-<img src="https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""  style="width:100%;height:auto;">>
+
+
+  <h1 class="ml12">use your headphone and sounds up</h1>
+ <a href="listen" style="position: absolute;top:70%;left: 15%; color:#ffff;font-size:5vw " > Listen From Radio Garden</a>
+<img
+  src="https://images.unsplash.com/photo-1626126525134-fbbc07afb32c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  alt="" style="width:100%;height:auto;">
+<img
+  src="https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  alt="" style="width:100%;height:auto;">>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <style>
-  .btn{
-     position: absolute;
-  top:70%;
-  left: 40%;
-   color:rgb(221, 154, 154);
-   font-size:6vw 
- 
+  .btn {
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    color: rgb(221, 154, 154);
+    font-size: 6vw
   }
 
   .ml12 {
-  font-weight: 200;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
-  position: absolute;
-  top:20%;
-  left: 10%;
-   color:#ffff;
-   font-size:6vw 
-}
+    font-weight: 200;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: #ffff;
+    font-size: 6vw
+  }
 
-.ml12 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
+  .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
 </style>
 <script>
-// Wrap every letter in a span
-var textWrapper = document.querySelector('.ml12');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector('.ml12');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml12 .letter',
-    translateX: [40,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1200,
-    delay: (el, i) => 500 + 30 * i
-  }).add({
-    targets: '.ml12 .letter',
-    translateX: [0,-30],
-    opacity: [1,0],
-    easing: "easeInExpo",
-    duration: 1100,
-    delay: (el, i) => 100 + 30 * i
-  });
-  </script>
+  anime.timeline({ loop: true })
+    .add({
+      targets: '.ml12 .letter',
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 1200,
+      delay: (el, i) => 500 + 30 * i
+    }).add({
+      targets: '.ml12 .letter',
+      translateX: [0, -30],
+      opacity: [1, 0],
+      easing: "easeInExpo",
+      duration: 1100,
+      delay: (el, i) => 100 + 30 * i
+    });
+</script>
