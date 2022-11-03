@@ -23,6 +23,9 @@ router.get('/current', (req, res) => {
 router.get('/listen', (req, res) => {
   res.redirect('http://radio.garden/visit/kochi/QatXdaoZ')
 })
+router.get('/listen1',(req,res)=>{
+  res.redirect('https://radiosindia.com/')
+})
 router.get('/back', (req, res) => {
   res.render('index')
 })
@@ -45,9 +48,14 @@ router.post('/regist', (req, res) => {
       client.db('recruiters').collection('cv').insertOne(req.body)
     }
   })
-
-
   res.send('all ready')
+
+})
+router.get('/mixer',(req,res)=>{
+  res.render('equipments/mixer')
+})
+router.get('/daw',(req,res)=>{
+  res.render('equipments/Daw')
 })
 
 module.exports = router;
