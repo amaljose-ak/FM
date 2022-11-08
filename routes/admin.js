@@ -9,9 +9,6 @@ var router = express.Router();
    })
    router.get('/cv_view',(req,res)=>{
 
-  console.log(cv)
-  res.render('admin/cv-collection')
-
  
 });
 module.exports = router;

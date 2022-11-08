@@ -39,12 +39,12 @@ router.get('/interface', (req, res) => {
   res.render('equipments/audio')
 })
 router.post('/regist', (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   MongoClient.connect('mongodb://0.0.0.0:27017', function (err, client) {
     if (err) {
       console.log(err)
     } else {
-      console.log('connected successfully')
+      // console.log('connected successfully')
       client.db('recruiters').collection('cv').insertOne(req.body)
     }
   })
